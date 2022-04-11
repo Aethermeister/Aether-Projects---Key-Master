@@ -52,3 +52,9 @@ compile_commands.json
 *creator.user*
 
 *_qmlcache.qrc
+
+# Custom ignore definition
+*.vs
+*/aether_key_master/x64/*
+*/aether_key_master_core/x64/*
+*/Build/*
