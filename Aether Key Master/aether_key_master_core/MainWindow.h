@@ -1,11 +1,31 @@
 #pragma once
-#include <QtWidgets/QMainWindow>
+
+#include <QWidget>
+#include "ui_MainWindow.h"
 
 namespace aether_key_master_core
 {
-    class MainWindow : public QMainWindow
-    {
-    public:
-        MainWindow(QWidget* parent = nullptr, Qt::WindowFlags flags = Qt::WindowFlags());
-    };
+	/**
+	 * @brief The main GUI class which presents every other widget
+	*/
+	class MainWindow : public QWidget
+	{
+		Q_OBJECT
+
+	public:
+		MainWindow(QWidget* parent = Q_NULLPTR);
+		~MainWindow() = default;
+
+	private:
+		Ui::MainWindow ui;
+
+		/**
+		 * @brief Show the MasterKeyWidget in the content area where the Master Key can be entered or created
+		*/
+		void showMasterKeyWidget();
+		/**
+		 * @brief Show the KeysContentWidget in the content area where the passwords can be stored and viewed
+		*/
+		void showKeysContentWidget();
+	};
 }

@@ -17,24 +17,101 @@
       <UniqueIdentifier>{639EADAA-A684-42e4-A9AD-28FC9BCB8F7C}</UniqueIdentifier>
       <Extensions>ts</Extensions>
     </Filter>
+    <Filter Include="Form Files">
+      <UniqueIdentifier>{99349809-55BA-4b9d-BF79-8FDBB0286EB3}</UniqueIdentifier>
+      <Extensions>ui</Extensions>
+      <ParseFiles>true</ParseFiles>
+    </Filter>
+    <Filter Include="Form Files\MasterKey">
+      <UniqueIdentifier>{1f22abbe-96d0-4b77-984b-949486b339fb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\MasterKey">
+      <UniqueIdentifier>{d251a884-d578-4a36-a5a6-3ae3e24df87a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\MasterKey">
+      <UniqueIdentifier>{5dbb0da2-2720-44ad-875a-abbc1765c77c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Utility">
+      <UniqueIdentifier>{e02c3748-836a-49a5-abfc-e28f99686548}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Utility">
+      <UniqueIdentifier>{b3092c5a-f157-4453-9bfb-08b64cbc68f4}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="aether_key_master_core_global.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClCompile Include="MainWindow.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClInclude Include="aether_key_master_core_main.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="MainWindow.h">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="MasterKey\MasterKeyValidationException.h">
+      <Filter>Header Files\MasterKey</Filter>
+    </ClInclude>
+    <ClInclude Include="Utility\Utility.h">
+      <Filter>Header Files\Utility</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="aether_key_master_core_main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="MainWindow.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="MasterKey\CreateMasterKeyWidget.cpp">
+      <Filter>Source Files\MasterKey</Filter>
+    </ClCompile>
+    <ClCompile Include="MasterKey\EnterMasterKeyWidget.cpp">
+      <Filter>Source Files\MasterKey</Filter>
+    </ClCompile>
+    <ClCompile Include="MasterKey\MasterKeyValidationException.cpp">
+      <Filter>Source Files\MasterKey</Filter>
+    </ClCompile>
+    <ClCompile Include="MasterKey\MasterKeyParentWidget.cpp">
+      <Filter>Source Files\MasterKey</Filter>
+    </ClCompile>
+    <ClCompile Include="User.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Utility\Utility.cpp">
+      <Filter>Source Files\Utility</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <QtMoc Include="MainWindow.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="MasterKey\EnterMasterKeyWidget.h">
+      <Filter>Header Files\MasterKey</Filter>
+    </QtMoc>
+    <QtMoc Include="MasterKey\CreateMasterKeyWidget.h">
+      <Filter>Header Files\MasterKey</Filter>
+    </QtMoc>
+    <QtMoc Include="MasterKey\MasterKeyParentWidget.h">
+      <Filter>Header Files\MasterKey</Filter>
+    </QtMoc>
+    <QtMoc Include="User.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+  </ItemGroup>
+  <ItemGroup>
+    <QtUic Include="MainWindow.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="MasterKey\EnterMasterKeyWidget.ui">
+      <Filter>Form Files\MasterKey</Filter>
+    </QtUic>
+    <QtUic Include="MasterKey\CreateMasterKeyWidget.ui">
+      <Filter>Form Files\MasterKey</Filter>
+    </QtUic>
+    <QtUic Include="MasterKey\MasterKeyParentWidget.ui">
+      <Filter>Form Files\MasterKey</Filter>
+    </QtUic>
+  </ItemGroup>
+  <ItemGroup>
+    <QtRcc Include="Resources\Resource.qrc">
+      <Filter>Resource Files</Filter>
+    </QtRcc>
   </ItemGroup>
 </Project>

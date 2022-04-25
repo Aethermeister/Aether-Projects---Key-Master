@@ -1,0 +1,73 @@
+QMainWindow
+{
+    background-color: rgb(50, 50, 50);
+}
+
+QWidget
+{
+    background-color: rgb(50, 50, 50);
+}
+
+QFrame
+{
+    background-color: rgb(50, 50, 50);
+}
+
+QLabel
+{
+    color: white;
+    background: transparent;
+}
+
+QLabel[severityType="error"]
+{
+    color: red;
+}
+
+QLineEdit
+{
+    color: white;
+    background: transparent;
+
+    border: none;
+    border-bottom: 1px solid gray;
+
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+QLineEdit[severityType="error"]
+{
+    border-bottom: 1px solid red;
+}
+
+QLineEdit:focus
+{
+    border-bottom: 1px solid white;
+}
+
+QPushButton
+{
+    color: white;
+    background-color: rgb(30, 30, 30);
+
+    border: none;
+    border-radius: 5px;
+
+    padding-left: 30px;
+    padding-right: 30px;
+
+    height: 35px;
+}
+
+QPushButton:hover
+{
+    background-color: rgb(25, 25, 25);
+}
+
+QPushButton:pressed
+{
+    background-color: rgb(20, 20, 20);
+}
