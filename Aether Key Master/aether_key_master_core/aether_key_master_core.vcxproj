@@ -63,13 +63,13 @@
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <ClCompile>
       <LanguageStandard>stdcpp17</LanguageStandard>
-      <AdditionalIncludeDirectories>$(ProjectDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(ProjectDir);.\KeysData;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <ClCompile>
       <LanguageStandard>stdcpp17</LanguageStandard>
-      <AdditionalIncludeDirectories>$(ProjectDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(ProjectDir);.\KeysData;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'" Label="Configuration">
@@ -101,6 +101,8 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="KeysData\KeyData.cpp" />
+    <ClCompile Include="KeysData\KeysDataParentWidget.cpp" />
     <ClCompile Include="MainWindow.cpp" />
     <ClCompile Include="MasterKey\CreateMasterKeyWidget.cpp" />
     <ClCompile Include="MasterKey\MasterKeyParentWidget.cpp" />
@@ -112,6 +114,8 @@
     <ClInclude Include="aether_key_master_core_main.h" />
     <ClCompile Include="aether_key_master_core_main.cpp" />
     <QtMoc Include="User.h" />
+    <QtMoc Include="KeysData\KeysDataParentWidget.h" />
+    <ClInclude Include="KeysData\KeyData.h" />
     <ClInclude Include="Utility\Utility.h" />
     <QtMoc Include="MasterKey\MasterKeyParentWidget.h" />
     <ClInclude Include="MasterKey\MasterKeyValidationException.h" />
@@ -120,6 +124,7 @@
     <QtMoc Include="MainWindow.h" />
   </ItemGroup>
   <ItemGroup>
+    <QtUic Include="KeysData\KeysDataParentWidget.ui" />
     <QtUic Include="MainWindow.ui" />
     <QtUic Include="MasterKey\CreateMasterKeyWidget.ui" />
     <QtUic Include="MasterKey\MasterKeyParentWidget.ui" />

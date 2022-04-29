@@ -8,6 +8,7 @@
 
 #include <QtCore/QJsonDocument>
 #include <QtCore/QJsonObject>
+#include <QtCore/QJsonArray>
 
 namespace aether_key_master_core
 {
@@ -19,12 +20,20 @@ namespace aether_key_master_core
 	{
 		//Convert the raw Keys data to JSON object
 		const auto keysJsonDocument = QJsonDocument::fromJson(rawKeysData.toUtf8());
-		const auto& keysJsonObject = keysJsonDocument.object();
+		const auto keysJsonArray = keysJsonDocument.array();
 
-		//Iterate the JSON object and extract the key-value pairs
-		for (auto it = keysJsonObject.begin(); it != keysJsonObject.end(); ++it)
+		//Iterate over the Keys JSON array and extract teh Key Data from it
+		for (const auto& arrayValue : keysJsonArray)
 		{
-			m_storedKeys[it.key()] = it.value().toString();
+			const auto keyObject = arrayValue.toObject();
+
+			m_storedKeys.append(
+				KeyData(
+					keyObject["title"].toString(),
+					keyObject["username"].toString(),
+					keyObject["password"].toString()
+				)
+			);
 		}
 	}
 
@@ -74,17 +83,19 @@ namespace aether_key_master_core
 
 	QString User::generateKeysData() const
 	{
-		//Root object of the JSON formatted Keys data
-		QJsonObject keysObject;
-
-		//Iterate over the Keys map and create the JSON key value pairs
-		for (auto it = m_storedKeys.begin(); it != m_storedKeys.end(); ++it)
+		//Convert hte Key Data to JSON format
+		QJsonArray keysArray;
+		for (const auto& keyData : m_storedKeys)
 		{
-			keysObject.insert(it.key(), it.value());
+			QJsonObject keyObject;
+			keyObject["title"] = keyData.title();
+			keyObject["username"] = keyData.username();
+			keyObject["password"] = keyData.password();
+			keysArray.append(keyObject);
 		}
 
 		//Return the JSON formatted Keys data as a QString
-		const auto keysDoc = QJsonDocument(keysObject);
+		const auto keysDoc = QJsonDocument(keysArray);
 		return dataToBase64(keysDoc.toJson());
 	}
 

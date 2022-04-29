@@ -198,6 +198,11 @@ p, li { white-space: pre-wrap; }
   </layout>
  </widget>
  <layoutdefault spacing="6" margin="11"/>
+ <tabstops>
+  <tabstop>m_masterKey_lineEdit</tabstop>
+  <tabstop>m_verifyMasterKey_lineEdit</tabstop>
+  <tabstop>m_createMasterKey_btn</tabstop>
+ </tabstops>
  <resources/>
  <connections/>
 </ui>

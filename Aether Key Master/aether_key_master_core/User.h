@@ -1,4 +1,6 @@
 #pragma once
+#include "KeysData/KeyData.h"
+
 #include <QtCore/QObject>
 #include <QtCore/QString>
 #include <QtCore/QMap>
@@ -49,9 +51,9 @@ namespace aether_key_master_core
 		*/
 		QString m_masterKey;
 		/**
-		 * @brief The Keys map which contains the names and passwords the user stores
+		 * @brief List of KeyData stored by the user
 		*/
-		QMap<QString, QString> m_storedKeys;
+		QVector<KeyData> m_storedKeys;
 
 		/**
 		 * @brief Convert the stored Keys map into JSON format

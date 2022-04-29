@@ -37,6 +37,15 @@
     <Filter Include="Source Files\Utility">
       <UniqueIdentifier>{b3092c5a-f157-4453-9bfb-08b64cbc68f4}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Form Files\KeysData">
+      <UniqueIdentifier>{1e294023-975c-4c0a-9951-3a90da03facc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\KeysData">
+      <UniqueIdentifier>{713b02ae-2cd0-4369-8bb2-731968765ab7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\KeysData">
+      <UniqueIdentifier>{dd558c9e-a4cf-40e0-9af8-71d213e858ca}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="aether_key_master_core_global.h">
@@ -50,6 +59,9 @@
     </ClInclude>
     <ClInclude Include="Utility\Utility.h">
       <Filter>Header Files\Utility</Filter>
+    </ClInclude>
+    <ClInclude Include="KeysData\KeyData.h">
+      <Filter>Header Files\KeysData</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -77,6 +89,12 @@
     <ClCompile Include="Utility\Utility.cpp">
       <Filter>Source Files\Utility</Filter>
     </ClCompile>
+    <ClCompile Include="KeysData\KeysDataParentWidget.cpp">
+      <Filter>Source Files\KeysData</Filter>
+    </ClCompile>
+    <ClCompile Include="KeysData\KeyData.cpp">
+      <Filter>Source Files\KeysData</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <QtMoc Include="MainWindow.h">
@@ -94,6 +112,9 @@
     <QtMoc Include="User.h">
       <Filter>Header Files</Filter>
     </QtMoc>
+    <QtMoc Include="KeysData\KeysDataParentWidget.h">
+      <Filter>Header Files\KeysData</Filter>
+    </QtMoc>
   </ItemGroup>
   <ItemGroup>
     <QtUic Include="MainWindow.ui">
@@ -107,6 +128,9 @@
     </QtUic>
     <QtUic Include="MasterKey\MasterKeyParentWidget.ui">
       <Filter>Form Files\MasterKey</Filter>
+    </QtUic>
+    <QtUic Include="KeysData\KeysDataParentWidget.ui">
+      <Filter>Form Files\KeysData</Filter>
     </QtUic>
   </ItemGroup>
   <ItemGroup>

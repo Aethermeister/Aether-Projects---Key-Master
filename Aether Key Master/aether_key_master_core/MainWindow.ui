@@ -16,10 +16,29 @@
     <height>525</height>
    </size>
   </property>
+  <property name="focusPolicy">
+   <enum>Qt::StrongFocus</enum>
+  </property>
   <property name="windowTitle">
    <string>Aether's Key Master</string>
   </property>
-  <layout class="QGridLayout" name="m_mainWindow_layout"/>
+  <layout class="QGridLayout" name="m_mainWindow_layout">
+   <property name="leftMargin">
+    <number>0</number>
+   </property>
+   <property name="topMargin">
+    <number>0</number>
+   </property>
+   <property name="rightMargin">
+    <number>0</number>
+   </property>
+   <property name="bottomMargin">
+    <number>0</number>
+   </property>
+   <property name="spacing">
+    <number>0</number>
+   </property>
+  </layout>
  </widget>
  <layoutdefault spacing="6" margin="11"/>
  <resources/>

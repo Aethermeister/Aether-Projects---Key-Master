@@ -10,6 +10,9 @@
     <height>637</height>
    </rect>
   </property>
+  <property name="focusPolicy">
+   <enum>Qt::StrongFocus</enum>
+  </property>
   <property name="windowTitle">
    <string>EnterMasterKeyWidget</string>
   </property>
@@ -139,6 +142,11 @@
   </layout>
  </widget>
  <layoutdefault spacing="6" margin="11"/>
+ <tabstops>
+  <tabstop>m_masterKey_lineEdit</tabstop>
+  <tabstop>m_enter_btn</tabstop>
+  <tabstop>m_reset_btn</tabstop>
+ </tabstops>
  <resources/>
  <connections/>
 </ui>

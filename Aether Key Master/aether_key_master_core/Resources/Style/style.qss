@@ -8,6 +8,11 @@ QWidget
     background-color: rgb(50, 50, 50);
 }
 
+QWidget[widgetType="header"]
+{
+    background-color: rgb(34, 34, 34);
+}
+
 QFrame
 {
     background-color: rgb(50, 50, 50);
@@ -54,7 +59,6 @@ QPushButton
     background-color: rgb(30, 30, 30);
 
     border: none;
-    border-radius: 5px;
 
     padding-left: 30px;
     padding-right: 30px;

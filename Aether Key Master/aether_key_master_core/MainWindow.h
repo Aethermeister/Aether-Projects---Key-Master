@@ -1,4 +1,5 @@
 #pragma once
+#include "User.h"
 
 #include <QWidget>
 #include "ui_MainWindow.h"
@@ -25,7 +26,9 @@ namespace aether_key_master_core
 		void showMasterKeyWidget();
 		/**
 		 * @brief Show the KeysContentWidget in the content area where the passwords can be stored and viewed
+		 * 
+		 * @param user The User object with the stored Keys data
 		*/
-		void showKeysContentWidget();
+		void showKeysContentWidget(QPointer<User> user);
 	};
 }
