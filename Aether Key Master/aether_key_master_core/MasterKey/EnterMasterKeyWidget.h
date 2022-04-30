@@ -31,6 +31,10 @@ namespace aether_key_master_core
 		void initializeConnections() const;
 
 		/**
+		 * @brief Slot to reset the previous Master Key and the corresponding Keys data
+		*/
+		void reset();
+		/**
 		 * @brief Overwrite and delete the Keys file in the AppData
 		*/
 		void deleteKeysFile() const;

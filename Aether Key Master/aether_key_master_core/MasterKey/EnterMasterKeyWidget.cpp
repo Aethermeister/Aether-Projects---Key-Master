@@ -1,5 +1,6 @@
 #include "EnterMasterKeyWidget.h"
 #include "Utility/Utility.h"
+#include "VerificationWidget.h"
 
 #include <QtCore/QFile>
 #include <QtCore/QSettings>
@@ -33,6 +34,16 @@ namespace aether_key_master_core
 	{
 		connect(ui.m_enter_btn, &QPushButton::clicked, this, &EnterMasterKeyWidget::slot_enterMasterKey);
 		connect(ui.m_reset_btn, &QPushButton::clicked, this, &EnterMasterKeyWidget::slot_reset);
+	}
+
+	void EnterMasterKeyWidget::reset()
+	{
+		//Delete the Keys file and the registry entries
+		deleteKeysFile();
+		deleteRegistryEntries();
+
+		//send signal to the parent so the GUI can be changed
+		emit sig_resetRequested();
 	}
 
 	void EnterMasterKeyWidget::deleteKeysFile() const
@@ -99,7 +110,7 @@ namespace aether_key_master_core
 			if(remainingAttempts <= 0)
 			{
 				restartEnterAttemptCounter();
-				slot_reset();
+				reset();
 			}
 		}
 
@@ -108,11 +119,15 @@ namespace aether_key_master_core
 
 	void EnterMasterKeyWidget::slot_reset()
 	{
-		//Delete the Keys file and the registry entries
-		deleteKeysFile();
-		deleteRegistryEntries();
+		//Show the verification widget to confirm the reset of the Master Key
+		QPointer<VerificationWidget> verificationWidget = new VerificationWidget("By resetting the Master Key you will lose all previously saved data\n\n"
+			"Do you confirm?");
+		verificationWidget->show();
 
-		//send signal to the parent so the GUI can be changed
-		emit sig_resetRequested();
+		//If the user confirms the reset of the Master Key reset it
+		connect(verificationWidget, &VerificationWidget::sig_verificationConfirmed, [this]
+			{
+				reset();
+			});
 	}
 }

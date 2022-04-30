@@ -13,6 +13,13 @@ QWidget[widgetType="header"]
     background-color: rgb(34, 34, 34);
 }
 
+QWidget[widgetType="dialog"]
+{
+    color: white;
+    border: 1px solid white;
+    background-color: rgb(100, 50, 50);
+}
+
 QFrame
 {
     background-color: rgb(50, 50, 50);

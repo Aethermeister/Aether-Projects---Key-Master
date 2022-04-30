@@ -63,13 +63,13 @@
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <ClCompile>
       <LanguageStandard>stdcpp17</LanguageStandard>
-      <AdditionalIncludeDirectories>$(ProjectDir);.\KeysData;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(ProjectDir);.\KeysData;.\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <ClCompile>
       <LanguageStandard>stdcpp17</LanguageStandard>
-      <AdditionalIncludeDirectories>$(ProjectDir);.\KeysData;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(ProjectDir);.\KeysData;.\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'" Label="Configuration">
@@ -101,6 +101,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="FadeInAnimation.cpp" />
     <ClCompile Include="KeysData\KeyData.cpp" />
     <ClCompile Include="KeysData\KeysDataParentWidget.cpp" />
     <ClCompile Include="MainWindow.cpp" />
@@ -110,11 +111,14 @@
     <ClCompile Include="MasterKey\EnterMasterKeyWidget.cpp" />
     <ClCompile Include="User.cpp" />
     <ClCompile Include="Utility\Utility.cpp" />
+    <ClCompile Include="VerificationWidget.cpp" />
     <ClInclude Include="aether_key_master_core_global.h" />
     <ClInclude Include="aether_key_master_core_main.h" />
     <ClCompile Include="aether_key_master_core_main.cpp" />
+    <QtMoc Include="VerificationWidget.h" />
     <QtMoc Include="User.h" />
     <QtMoc Include="KeysData\KeysDataParentWidget.h" />
+    <QtMoc Include="FadeInAnimation.h" />
     <ClInclude Include="KeysData\KeyData.h" />
     <ClInclude Include="Utility\Utility.h" />
     <QtMoc Include="MasterKey\MasterKeyParentWidget.h" />
@@ -129,6 +133,7 @@
     <QtUic Include="MasterKey\CreateMasterKeyWidget.ui" />
     <QtUic Include="MasterKey\MasterKeyParentWidget.ui" />
     <QtUic Include="MasterKey\EnterMasterKeyWidget.ui" />
+    <QtUic Include="VerificationWidget.ui" />
   </ItemGroup>
   <ItemGroup>
     <QtRcc Include="Resources\Resource.qrc" />
