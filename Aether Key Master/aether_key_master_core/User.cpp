@@ -81,6 +81,16 @@ namespace aether_key_master_core
 		writeKeysFile(mergedData);
 	}
 
+	const QVector<KeyData>& User::storedKeys() const
+	{
+		return m_storedKeys;
+	}
+
+	void User::addKeyData(const KeyData& keyData)
+	{
+		m_storedKeys.append(keyData);
+	}
+
 	QString User::generateKeysData() const
 	{
 		//Convert hte Key Data to JSON format

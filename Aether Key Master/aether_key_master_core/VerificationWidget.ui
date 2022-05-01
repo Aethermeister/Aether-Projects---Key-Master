@@ -41,7 +41,7 @@
       <enum>QFrame::Raised</enum>
      </property>
      <property name="widgetType" stdset="0">
-      <string>dialog</string>
+      <string>verification</string>
      </property>
      <layout class="QGridLayout" name="gridLayout_2">
       <item row="0" column="0" colspan="3">
@@ -96,6 +96,10 @@
   </layout>
  </widget>
  <layoutdefault spacing="6" margin="11"/>
+ <tabstops>
+  <tabstop>m_confirm_btn</tabstop>
+  <tabstop>m_cancel_btn</tabstop>
+ </tabstops>
  <resources/>
  <connections/>
 </ui>

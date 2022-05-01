@@ -2,6 +2,8 @@
 #include "User.h"
 
 #include <QWidget>
+#include <QtCore/QPointer>
+
 #include "ui_KeysDataParentWidget.h"
 
 namespace aether_key_master_core
@@ -19,5 +21,21 @@ namespace aether_key_master_core
 
 	private:
 		Ui::KeysDataParentWidget ui;
+
+		/**
+		 * @brief The currently active user
+		*/
+		QPointer<User> m_user;
+
+		/**
+		 * @brief Initialize the default signal-slot connections
+		*/
+		void initializeConnections() const;
+
+	private slots:
+		/**
+		 * @brief Slot to show modal dialog to add new KeyData to the user
+		*/
+		void slot_showAddKeyDataWidget() const;
 	};
 }

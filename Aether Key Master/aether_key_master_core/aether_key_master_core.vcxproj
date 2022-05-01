@@ -102,6 +102,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="FadeInAnimation.cpp" />
+    <ClCompile Include="KeysData\AddNewKeyDataWidget.cpp" />
     <ClCompile Include="KeysData\KeyData.cpp" />
     <ClCompile Include="KeysData\KeysDataParentWidget.cpp" />
     <ClCompile Include="MainWindow.cpp" />
@@ -119,6 +120,7 @@
     <QtMoc Include="User.h" />
     <QtMoc Include="KeysData\KeysDataParentWidget.h" />
     <QtMoc Include="FadeInAnimation.h" />
+    <QtMoc Include="KeysData\AddNewKeyDataWidget.h" />
     <ClInclude Include="KeysData\KeyData.h" />
     <ClInclude Include="Utility\Utility.h" />
     <QtMoc Include="MasterKey\MasterKeyParentWidget.h" />
@@ -128,6 +130,7 @@
     <QtMoc Include="MainWindow.h" />
   </ItemGroup>
   <ItemGroup>
+    <QtUic Include="KeysData\AddNewKeyDataWidget.ui" />
     <QtUic Include="KeysData\KeysDataParentWidget.ui" />
     <QtUic Include="MainWindow.ui" />
     <QtUic Include="MasterKey\CreateMasterKeyWidget.ui" />

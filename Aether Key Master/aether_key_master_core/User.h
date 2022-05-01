@@ -45,6 +45,19 @@ namespace aether_key_master_core
 		*/
 		void saveKeys() const;
 
+		/**
+		 * @brief Getter of the stored KeyData QVector
+		 * 
+		 * @return The stored KeyData QVector
+		*/
+		const QVector<KeyData>& storedKeys() const;
+		/**
+		 * @brief Inserts the given KeyData at the end of the stored KeyData QVector
+		 * 
+		 * @param keyData The KeyData object which has to be stored
+		*/
+		void addKeyData(const KeyData& keyData);
+
 	private:
 		/**
 		 * @brief The Master Key (master password) which secures the other Keys (passwords)

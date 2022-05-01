@@ -107,6 +107,9 @@
     <ClCompile Include="FadeInAnimation.cpp">
       <Filter>Source Files\Animation</Filter>
     </ClCompile>
+    <ClCompile Include="KeysData\AddNewKeyDataWidget.cpp">
+      <Filter>Source Files\KeysData</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <QtMoc Include="MainWindow.h">
@@ -133,6 +136,9 @@
     <QtMoc Include="FadeInAnimation.h">
       <Filter>Header Files\Animation</Filter>
     </QtMoc>
+    <QtMoc Include="KeysData\AddNewKeyDataWidget.h">
+      <Filter>Header Files\KeysData</Filter>
+    </QtMoc>
   </ItemGroup>
   <ItemGroup>
     <QtUic Include="MainWindow.ui">
@@ -152,6 +158,9 @@
     </QtUic>
     <QtUic Include="VerificationWidget.ui">
       <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="KeysData\AddNewKeyDataWidget.ui">
+      <Filter>Form Files\KeysData</Filter>
     </QtUic>
   </ItemGroup>
   <ItemGroup>

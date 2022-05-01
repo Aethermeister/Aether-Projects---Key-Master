@@ -1,10 +1,12 @@
 QMainWindow
 {
+    color: white;
     background-color: rgb(50, 50, 50);
 }
 
 QWidget
 {
+    color: white;
     background-color: rgb(50, 50, 50);
 }
 
@@ -15,7 +17,12 @@ QWidget[widgetType="header"]
 
 QWidget[widgetType="dialog"]
 {
-    color: white;
+    border: 1px solid white;
+    background-color: rgb(45, 45, 45);
+}
+
+QWidget[widgetType="verification"]
+{
     border: 1px solid white;
     background-color: rgb(100, 50, 50);
 }
