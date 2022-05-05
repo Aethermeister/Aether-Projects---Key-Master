@@ -1,3 +1,4 @@
+#include "Aether CPP Logger/include/Logger.h"
 #include "User.h"
 #include "Utility/Utility.h"
 
@@ -35,6 +36,8 @@ namespace aether_key_master_core
 				)
 			);
 		}
+
+		AETHER_LOG_INFO("User created with stored KeyData");
 	}
 
 	QPointer<User> User::verifyMasterKeyForEnter(const QString& masterKey)
@@ -79,6 +82,8 @@ namespace aether_key_master_core
 		//Merge the individual data into one QString and write it into the Keys file
 		const auto mergedData = generateMergedKeysData(base64KeysFileTimeLockKey, base64MasterKey, base64KeysData);
 		writeKeysFile(mergedData);
+
+		AETHER_LOG_INFO("Keys file saved");
 	}
 
 	const QVector<KeyData>& User::storedKeys() const
@@ -89,6 +94,7 @@ namespace aether_key_master_core
 	void User::addKeyData(const KeyData& keyData)
 	{
 		m_storedKeys.append(keyData);
+		AETHER_LOG_INFO("KeyData added");
 	}
 
 	QString User::generateKeysData() const

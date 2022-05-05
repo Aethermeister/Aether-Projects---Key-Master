@@ -1,5 +1,8 @@
 #include "AddNewKeyDataWidget.h"
 #include "Utility/Utility.h"
+#include "MainWindow.h"
+
+#include "Aether CPP Logger/include/Logger.h"
 
 namespace aether_key_master_core
 {
@@ -66,6 +69,8 @@ namespace aether_key_master_core
 		//If the title is empty show error message and do not save the new KeyData
 		if (title.trimmed().isEmpty())
 		{
+			AETHER_LOG_ERROR("New KeyData error: Title is empty");
+
 			changeWidgetSeverityStyle(ui.m_title_lineEdit, "error");
 			ui.m_errorInformation_lbl->setVisible(true);
 			return;
@@ -78,6 +83,8 @@ namespace aether_key_master_core
 		const KeyData newKeyData(title, username, password);
 		m_user->addKeyData(newKeyData);
 		m_user->saveKeys();
+
+		MainWindow::showNotification(QString("Key data added - %0").arg(title));
 
 		close();
 	}

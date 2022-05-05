@@ -17,7 +17,7 @@ namespace aether_key_master_core
 	{
 		//Set the properties of the widget and show the verification message
 		setWindowModality(Qt::WindowModality::ApplicationModal);
-		setWindowFlags(Qt::FramelessWindowHint);
+		setWindowFlags(Qt::FramelessWindowHint | Qt::Dialog);
 		setAttribute(Qt::WA_DeleteOnClose);
 		setAutoFillBackground(true);
 

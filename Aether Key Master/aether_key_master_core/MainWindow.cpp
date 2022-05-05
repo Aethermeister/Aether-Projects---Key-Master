@@ -3,17 +3,34 @@
 #include "KeysData/KeysDataParentWidget.h"
 #include "Utility/Utility.h"
 
-#include <QPointer>
-
 namespace aether_key_master_core
 {
+	MainWindow* MainWindow::s_instance = nullptr;
+	QPointer<NotificationWidget> MainWindow::s_notificationWidget = nullptr;
+
 	MainWindow::MainWindow(QWidget* parent)
 		: QWidget(parent)
 	{
 		ui.setupUi(this);
 
+		s_instance = this;
+
 		//Always show the MasterKeyWidget first
 		showMasterKeyWidget();
+	}
+
+	void MainWindow::showNotification(const QString& message)
+	{
+		//Check whether there is a notification already shown
+		//and delete it if it exists
+		if (s_notificationWidget)
+		{
+			s_notificationWidget->deleteLater();
+		}
+
+		//Create and show the notification widget
+		s_notificationWidget = new NotificationWidget(message, s_instance);
+		s_notificationWidget->show();
 	}
 
 	void MainWindow::showMasterKeyWidget()

@@ -63,14 +63,22 @@
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <ClCompile>
       <LanguageStandard>stdcpp17</LanguageStandard>
-      <AdditionalIncludeDirectories>$(ProjectDir);.\KeysData;.\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(ProjectDir);.\KeysData;.\;..\thirdparty;.\Notification;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
+    <Link>
+      <AdditionalDependencies>aether_cpplogger.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>..\thirdparty\Aether CPP Logger\libs\x64\Debug;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+    </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <ClCompile>
       <LanguageStandard>stdcpp17</LanguageStandard>
-      <AdditionalIncludeDirectories>$(ProjectDir);.\KeysData;.\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(ProjectDir);.\KeysData;.\;..\thirdparty;.\Notification;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
+    <Link>
+      <AdditionalDependencies>aether_cpplogger.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>..\thirdparty\Aether CPP Logger\libs\x64\Release;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+    </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'" Label="Configuration">
     <ClCompile>
@@ -101,7 +109,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="FadeInAnimation.cpp" />
+    <ClCompile Include="Animation\FadeInAnimation.cpp" />
     <ClCompile Include="KeysData\AddNewKeyDataWidget.cpp" />
     <ClCompile Include="KeysData\KeyData.cpp" />
     <ClCompile Include="KeysData\KeysDataParentWidget.cpp" />
@@ -110,18 +118,20 @@
     <ClCompile Include="MasterKey\MasterKeyParentWidget.cpp" />
     <ClCompile Include="MasterKey\MasterKeyValidationException.cpp" />
     <ClCompile Include="MasterKey\EnterMasterKeyWidget.cpp" />
+    <ClCompile Include="Notification\NotificationWidget.cpp" />
+    <ClCompile Include="Notification\VerificationWidget.cpp" />
     <ClCompile Include="User.cpp" />
     <ClCompile Include="Utility\Utility.cpp" />
-    <ClCompile Include="VerificationWidget.cpp" />
     <ClInclude Include="aether_key_master_core_global.h" />
     <ClInclude Include="aether_key_master_core_main.h" />
     <ClCompile Include="aether_key_master_core_main.cpp" />
-    <QtMoc Include="VerificationWidget.h" />
     <QtMoc Include="User.h" />
     <QtMoc Include="KeysData\KeysDataParentWidget.h" />
-    <QtMoc Include="FadeInAnimation.h" />
     <QtMoc Include="KeysData\AddNewKeyDataWidget.h" />
+    <QtMoc Include="Animation\FadeInAnimation.h" />
     <ClInclude Include="KeysData\KeyData.h" />
+    <QtMoc Include="Notification\VerificationWidget.h" />
+    <QtMoc Include="Notification\NotificationWidget.h" />
     <ClInclude Include="Utility\Utility.h" />
     <QtMoc Include="MasterKey\MasterKeyParentWidget.h" />
     <ClInclude Include="MasterKey\MasterKeyValidationException.h" />
@@ -136,7 +146,8 @@
     <QtUic Include="MasterKey\CreateMasterKeyWidget.ui" />
     <QtUic Include="MasterKey\MasterKeyParentWidget.ui" />
     <QtUic Include="MasterKey\EnterMasterKeyWidget.ui" />
-    <QtUic Include="VerificationWidget.ui" />
+    <QtUic Include="Notification\NotificationWidget.ui" />
+    <QtUic Include="Notification\VerificationWidget.ui" />
   </ItemGroup>
   <ItemGroup>
     <QtRcc Include="Resources\Resource.qrc" />

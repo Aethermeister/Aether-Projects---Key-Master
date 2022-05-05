@@ -1,6 +1,8 @@
 #include "EnterMasterKeyWidget.h"
+#include "Aether CPP Logger/include/Logger.h"
 #include "Utility/Utility.h"
-#include "VerificationWidget.h"
+#include "Notification/VerificationWidget.h"
+#include "MainWindow.h"
 
 #include <QtCore/QFile>
 #include <QtCore/QSettings>
@@ -106,9 +108,13 @@ namespace aether_key_master_core
 
 			//Decrease the remaining attempts
 			const auto remainingAttempts = decreaseRemainingEnterAttempts();
+
+			AETHER_LOG_WARNING(QString("Invalid enter attempt. %0 attempt(s) ramain(s)").arg(remainingAttempts).toStdString());
+
 			//If the remaining attempts counter value reaches 0 initiate the Master Key and Keys data reset
 			if(remainingAttempts <= 0)
 			{
+				AETHER_LOG_WARNING("Resetting Master Key because enter attempts reached zero");
 				restartEnterAttemptCounter();
 				reset();
 			}
@@ -121,12 +127,13 @@ namespace aether_key_master_core
 	{
 		//Show the verification widget to confirm the reset of the Master Key
 		QPointer<VerificationWidget> verificationWidget = new VerificationWidget("By resetting the Master Key you will lose all previously saved data\n\n"
-			"Do you confirm?");
+			"Do you confirm?", this);
 		verificationWidget->show();
 
 		//If the user confirms the reset of the Master Key reset it
 		connect(verificationWidget, &VerificationWidget::sig_verificationConfirmed, [this]
 			{
+				AETHER_LOG_INFO("Resetting Master Key by user request");
 				reset();
 			});
 	}

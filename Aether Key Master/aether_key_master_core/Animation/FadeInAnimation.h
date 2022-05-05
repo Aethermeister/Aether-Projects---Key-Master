@@ -1,6 +1,8 @@
 #pragma once
 
 #include <QtWidgets/QWidget>
+#include <QtCore/QPropertyAnimation>
+#include <QtCore/QPointer>
 
 namespace aether_key_master_core
 {
@@ -16,6 +18,12 @@ namespace aether_key_master_core
 
 	protected:
 		virtual void showEvent(QShowEvent* event) override;
+
+		/**
+		 * @brief Member variable which handles the animation
+		 * It is initialized in the header so the derived classes can use it during construction
+		*/
+		QPointer<QPropertyAnimation> m_fadeInAnimation = new QPropertyAnimation();
 
 	private:
 		/**

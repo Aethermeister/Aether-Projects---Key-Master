@@ -1,8 +1,5 @@
 #include "FadeInAnimation.h"
 
-#include <QtCore/QPropertyAnimation>
-#include <QtCore/QPointer>
-
 namespace aether_key_master_core
 {
 	FadeInAnimation::FadeInAnimation(QWidget* parent)
@@ -20,11 +17,15 @@ namespace aether_key_master_core
 	void FadeInAnimation::initializeAnimation()
 	{
 		//Create a property animation which changes the window opacity over time
-		QPointer<QPropertyAnimation> fadeInAnimation = new QPropertyAnimation(this, "windowOpacity");
-		fadeInAnimation->setDuration(m_animationDuration);
-		fadeInAnimation->setStartValue(0);
-		fadeInAnimation->setEndValue(1);
+		m_fadeInAnimation->setParent(this);
 
-		fadeInAnimation->start();
+		m_fadeInAnimation->setTargetObject(this);
+		m_fadeInAnimation->setPropertyName("windowOpacity");
+
+		m_fadeInAnimation->setDuration(m_animationDuration);
+		m_fadeInAnimation->setStartValue(0);
+		m_fadeInAnimation->setEndValue(1);
+
+		m_fadeInAnimation->start();
 	}
 }

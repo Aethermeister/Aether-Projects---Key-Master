@@ -1,5 +1,5 @@
 #pragma once
-#include "FadeInAnimation.h"
+#include "Animation/FadeInAnimation.h"
 #include "User.h"
 
 #include <QtCore/QPointer>

@@ -52,6 +52,15 @@
     <Filter Include="Source Files\Animation">
       <UniqueIdentifier>{6e83fe10-9e0d-4f5c-a7e1-26e1244e8ea9}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source Files\Notification">
+      <UniqueIdentifier>{66cb069e-d8d1-4199-820b-1baae8fa00a2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Notification">
+      <UniqueIdentifier>{853b2f43-6de7-490b-b663-811e9b7b9da8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Form Files\Notification">
+      <UniqueIdentifier>{ad4aaf23-6937-4533-a3cc-e7c7949c48a7}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="aether_key_master_core_global.h">
@@ -101,14 +110,17 @@
     <ClCompile Include="KeysData\KeyData.cpp">
       <Filter>Source Files\KeysData</Filter>
     </ClCompile>
-    <ClCompile Include="VerificationWidget.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="FadeInAnimation.cpp">
-      <Filter>Source Files\Animation</Filter>
-    </ClCompile>
     <ClCompile Include="KeysData\AddNewKeyDataWidget.cpp">
       <Filter>Source Files\KeysData</Filter>
+    </ClCompile>
+    <ClCompile Include="Animation\FadeInAnimation.cpp">
+      <Filter>Source Files\Animation</Filter>
+    </ClCompile>
+    <ClCompile Include="Notification\VerificationWidget.cpp">
+      <Filter>Source Files\Notification</Filter>
+    </ClCompile>
+    <ClCompile Include="Notification\NotificationWidget.cpp">
+      <Filter>Source Files\Notification</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -130,14 +142,17 @@
     <QtMoc Include="KeysData\KeysDataParentWidget.h">
       <Filter>Header Files\KeysData</Filter>
     </QtMoc>
-    <QtMoc Include="VerificationWidget.h">
-      <Filter>Header Files</Filter>
-    </QtMoc>
-    <QtMoc Include="FadeInAnimation.h">
-      <Filter>Header Files\Animation</Filter>
-    </QtMoc>
     <QtMoc Include="KeysData\AddNewKeyDataWidget.h">
       <Filter>Header Files\KeysData</Filter>
+    </QtMoc>
+    <QtMoc Include="Animation\FadeInAnimation.h">
+      <Filter>Header Files\Animation</Filter>
+    </QtMoc>
+    <QtMoc Include="Notification\VerificationWidget.h">
+      <Filter>Header Files\Notification</Filter>
+    </QtMoc>
+    <QtMoc Include="Notification\NotificationWidget.h">
+      <Filter>Header Files\Notification</Filter>
     </QtMoc>
   </ItemGroup>
   <ItemGroup>
@@ -156,11 +171,14 @@
     <QtUic Include="KeysData\KeysDataParentWidget.ui">
       <Filter>Form Files\KeysData</Filter>
     </QtUic>
-    <QtUic Include="VerificationWidget.ui">
-      <Filter>Form Files</Filter>
-    </QtUic>
     <QtUic Include="KeysData\AddNewKeyDataWidget.ui">
       <Filter>Form Files\KeysData</Filter>
+    </QtUic>
+    <QtUic Include="Notification\VerificationWidget.ui">
+      <Filter>Form Files\Notification</Filter>
+    </QtUic>
+    <QtUic Include="Notification\NotificationWidget.ui">
+      <Filter>Form Files\Notification</Filter>
     </QtUic>
   </ItemGroup>
   <ItemGroup>
