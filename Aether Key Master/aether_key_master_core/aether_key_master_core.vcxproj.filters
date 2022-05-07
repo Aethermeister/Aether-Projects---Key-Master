@@ -122,6 +122,9 @@
     <ClCompile Include="Notification\NotificationWidget.cpp">
       <Filter>Source Files\Notification</Filter>
     </ClCompile>
+    <ClCompile Include="MasterKey\MasterKeyResetHandler.cpp">
+      <Filter>Source Files\MasterKey</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <QtMoc Include="MainWindow.h">
@@ -153,6 +156,9 @@
     </QtMoc>
     <QtMoc Include="Notification\NotificationWidget.h">
       <Filter>Header Files\Notification</Filter>
+    </QtMoc>
+    <QtMoc Include="MasterKey\MasterKeyResetHandler.h">
+      <Filter>Header Files\MasterKey</Filter>
     </QtMoc>
   </ItemGroup>
   <ItemGroup>

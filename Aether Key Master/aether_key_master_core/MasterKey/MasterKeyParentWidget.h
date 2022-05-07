@@ -1,7 +1,6 @@
 #pragma once
 #include "User.h"
 
-
 #include <QWidget>
 #include "ui_MasterKeyParentWidget.h"
 

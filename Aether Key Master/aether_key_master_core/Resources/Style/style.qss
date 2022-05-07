@@ -87,6 +87,20 @@ QPushButton
     height: 35px;
 }
 
+QPushButton[widgetType="header"]
+{
+    color: white;
+    background-color: rgb(34, 34, 34);
+
+    border: none;
+
+    padding-left: 30px;
+    padding-right: 30px;
+
+    font-size: 12px;
+    font-weight: bold;
+}
+
 QPushButton:hover
 {
     background-color: rgb(25, 25, 25);

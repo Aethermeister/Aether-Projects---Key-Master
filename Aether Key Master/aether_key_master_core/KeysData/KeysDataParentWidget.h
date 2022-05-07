@@ -1,4 +1,5 @@
 #pragma once
+#include "MasterKey/MasterKeyResetHandler.h"
 #include "User.h"
 
 #include <QWidget>
@@ -11,13 +12,13 @@ namespace aether_key_master_core
 	/**
 	 * @brief Main GUI class for the Key Data related widget presentation
 	*/
-	class KeysDataParentWidget : public QWidget
+	class KeysDataParentWidget : public MasterKeyResetHandler
 	{
 		Q_OBJECT
 
 	public:
 		KeysDataParentWidget(QPointer<User> user, QWidget* parent = Q_NULLPTR);
-		~KeysDataParentWidget() = default;
+		virtual ~KeysDataParentWidget() = default;
 
 	private:
 		Ui::KeysDataParentWidget ui;

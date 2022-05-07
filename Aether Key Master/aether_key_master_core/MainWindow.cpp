@@ -52,5 +52,7 @@ namespace aether_key_master_core
 		//Create the KeysDataParentWidget and add it to the content area
 		QPointer<KeysDataParentWidget> keysDataWidget = new KeysDataParentWidget(user, this);
 		ui.m_mainWindow_layout->addWidget(keysDataWidget);
+
+		connect(keysDataWidget, &KeysDataParentWidget::sig_resetRequested, this, &MainWindow::showMasterKeyWidget);
 	}
 }

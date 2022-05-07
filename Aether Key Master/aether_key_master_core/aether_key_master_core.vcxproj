@@ -116,6 +116,7 @@
     <ClCompile Include="MainWindow.cpp" />
     <ClCompile Include="MasterKey\CreateMasterKeyWidget.cpp" />
     <ClCompile Include="MasterKey\MasterKeyParentWidget.cpp" />
+    <ClCompile Include="MasterKey\MasterKeyResetHandler.cpp" />
     <ClCompile Include="MasterKey\MasterKeyValidationException.cpp" />
     <ClCompile Include="MasterKey\EnterMasterKeyWidget.cpp" />
     <ClCompile Include="Notification\NotificationWidget.cpp" />
@@ -132,6 +133,7 @@
     <ClInclude Include="KeysData\KeyData.h" />
     <QtMoc Include="Notification\VerificationWidget.h" />
     <QtMoc Include="Notification\NotificationWidget.h" />
+    <QtMoc Include="MasterKey\MasterKeyResetHandler.h" />
     <ClInclude Include="Utility\Utility.h" />
     <QtMoc Include="MasterKey\MasterKeyParentWidget.h" />
     <ClInclude Include="MasterKey\MasterKeyValidationException.h" />

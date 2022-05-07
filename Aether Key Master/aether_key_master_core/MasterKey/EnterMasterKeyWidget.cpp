@@ -4,15 +4,12 @@
 #include "Notification/VerificationWidget.h"
 #include "MainWindow.h"
 
-#include <QtCore/QFile>
 #include <QtCore/QSettings>
 
 namespace aether_key_master_core
 {
-	static constexpr const char* OVERWRITEPATTERN = "00000000000000000000000000000000000000000000000000";
-
 	EnterMasterKeyWidget::EnterMasterKeyWidget(QWidget* parent)
-		: QWidget(parent)
+		: MasterKeyResetHandler(parent)
 	{
 		ui.setupUi(this);
 
@@ -36,31 +33,6 @@ namespace aether_key_master_core
 	{
 		connect(ui.m_enter_btn, &QPushButton::clicked, this, &EnterMasterKeyWidget::slot_enterMasterKey);
 		connect(ui.m_reset_btn, &QPushButton::clicked, this, &EnterMasterKeyWidget::slot_reset);
-	}
-
-	void EnterMasterKeyWidget::reset()
-	{
-		//Delete the Keys file and the registry entries
-		deleteKeysFile();
-		deleteRegistryEntries();
-
-		//send signal to the parent so the GUI can be changed
-		emit sig_resetRequested();
-	}
-
-	void EnterMasterKeyWidget::deleteKeysFile() const
-	{
-		//Overwrite the Keys file with dummy data and delete the file
-		writeKeysFile(OVERWRITEPATTERN);
-		QFile::remove(appdataFolder() + KEYSFILE);
-	}
-
-	void EnterMasterKeyWidget::deleteRegistryEntries() const
-	{
-		//Remove the time lock key and remaining attempts counter registry entries
-		QSettings settings;
-		settings.remove(TIMELOCKENTRYNAME);
-		settings.remove(REMAININGENTERATTEMPTSENTRYNAME);
 	}
 
 	void EnterMasterKeyWidget::adjustErrorMessage()
@@ -121,20 +93,5 @@ namespace aether_key_master_core
 		}
 
 		adjustErrorMessage();
-	}
-
-	void EnterMasterKeyWidget::slot_reset()
-	{
-		//Show the verification widget to confirm the reset of the Master Key
-		QPointer<VerificationWidget> verificationWidget = new VerificationWidget("By resetting the Master Key you will lose all previously saved data\n\n"
-			"Do you confirm?", this);
-		verificationWidget->show();
-
-		//If the user confirms the reset of the Master Key reset it
-		connect(verificationWidget, &VerificationWidget::sig_verificationConfirmed, [this]
-			{
-				AETHER_LOG_INFO("Resetting Master Key by user request");
-				reset();
-			});
 	}
 }
