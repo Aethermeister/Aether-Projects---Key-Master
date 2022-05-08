@@ -114,11 +114,13 @@
     <ClCompile Include="KeysData\KeyData.cpp" />
     <ClCompile Include="KeysData\KeysDataParentWidget.cpp" />
     <ClCompile Include="MainWindow.cpp" />
+    <ClCompile Include="MasterKey\ChangeMasterKeyWidget.cpp" />
     <ClCompile Include="MasterKey\CreateMasterKeyWidget.cpp" />
     <ClCompile Include="MasterKey\MasterKeyParentWidget.cpp" />
     <ClCompile Include="MasterKey\MasterKeyResetHandler.cpp" />
     <ClCompile Include="MasterKey\MasterKeyValidationException.cpp" />
     <ClCompile Include="MasterKey\EnterMasterKeyWidget.cpp" />
+    <ClCompile Include="MasterKey\MasterKeyValidator.cpp" />
     <ClCompile Include="Notification\NotificationWidget.cpp" />
     <ClCompile Include="Notification\VerificationWidget.cpp" />
     <ClCompile Include="User.cpp" />
@@ -134,6 +136,8 @@
     <QtMoc Include="Notification\VerificationWidget.h" />
     <QtMoc Include="Notification\NotificationWidget.h" />
     <QtMoc Include="MasterKey\MasterKeyResetHandler.h" />
+    <QtMoc Include="MasterKey\ChangeMasterKeyWidget.h" />
+    <ClInclude Include="MasterKey\MasterKeyValidator.h" />
     <ClInclude Include="Utility\Utility.h" />
     <QtMoc Include="MasterKey\MasterKeyParentWidget.h" />
     <ClInclude Include="MasterKey\MasterKeyValidationException.h" />
@@ -145,6 +149,7 @@
     <QtUic Include="KeysData\AddNewKeyDataWidget.ui" />
     <QtUic Include="KeysData\KeysDataParentWidget.ui" />
     <QtUic Include="MainWindow.ui" />
+    <QtUic Include="MasterKey\ChangeMasterKeyWidget.ui" />
     <QtUic Include="MasterKey\CreateMasterKeyWidget.ui" />
     <QtUic Include="MasterKey\MasterKeyParentWidget.ui" />
     <QtUic Include="MasterKey\EnterMasterKeyWidget.ui" />

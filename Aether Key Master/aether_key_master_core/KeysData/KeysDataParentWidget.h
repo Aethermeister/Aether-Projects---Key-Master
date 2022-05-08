@@ -37,6 +37,10 @@ namespace aether_key_master_core
 		/**
 		 * @brief Slot to show modal dialog to add new KeyData to the user
 		*/
-		void slot_showAddKeyDataWidget() const;
+		void slot_showAddKeyDataWidget();
+		/**
+		 * @brief Slot to show modal dialog to change the user's Master Key
+		*/
+		void slot_showChangeMasterKeyWidget();
 	};
 }

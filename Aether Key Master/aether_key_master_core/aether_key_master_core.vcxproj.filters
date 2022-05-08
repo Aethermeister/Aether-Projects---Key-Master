@@ -78,6 +78,9 @@
     <ClInclude Include="KeysData\KeyData.h">
       <Filter>Header Files\KeysData</Filter>
     </ClInclude>
+    <ClInclude Include="MasterKey\MasterKeyValidator.h">
+      <Filter>Header Files\MasterKey</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="aether_key_master_core_main.cpp">
@@ -125,6 +128,12 @@
     <ClCompile Include="MasterKey\MasterKeyResetHandler.cpp">
       <Filter>Source Files\MasterKey</Filter>
     </ClCompile>
+    <ClCompile Include="MasterKey\MasterKeyValidator.cpp">
+      <Filter>Source Files\MasterKey</Filter>
+    </ClCompile>
+    <ClCompile Include="MasterKey\ChangeMasterKeyWidget.cpp">
+      <Filter>Source Files\MasterKey</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <QtMoc Include="MainWindow.h">
@@ -160,6 +169,9 @@
     <QtMoc Include="MasterKey\MasterKeyResetHandler.h">
       <Filter>Header Files\MasterKey</Filter>
     </QtMoc>
+    <QtMoc Include="MasterKey\ChangeMasterKeyWidget.h">
+      <Filter>Header Files\MasterKey</Filter>
+    </QtMoc>
   </ItemGroup>
   <ItemGroup>
     <QtUic Include="MainWindow.ui">
@@ -185,6 +197,9 @@
     </QtUic>
     <QtUic Include="Notification\NotificationWidget.ui">
       <Filter>Form Files\Notification</Filter>
+    </QtUic>
+    <QtUic Include="MasterKey\ChangeMasterKeyWidget.ui">
+      <Filter>Form Files\MasterKey</Filter>
     </QtUic>
   </ItemGroup>
   <ItemGroup>

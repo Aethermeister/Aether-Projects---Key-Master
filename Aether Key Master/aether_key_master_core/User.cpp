@@ -67,6 +67,16 @@ namespace aether_key_master_core
 		return nullptr;
 	}
 
+	bool User::verifyMasterKeyForChange(const QString& masterKey) const
+	{
+		return m_masterKey == masterKey;
+	}
+
+	void User::setMasterKey(const QString& masterKey)
+	{
+		m_masterKey = masterKey;
+	}
+
 	void User::saveKeys() const
 	{
 		//Get the base64 Keys data and Master Key

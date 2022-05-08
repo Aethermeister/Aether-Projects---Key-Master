@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
- <class>AddNewKeyDataWidget</class>
- <widget class="QWidget" name="AddNewKeyDataWidget">
+ <class>ChangeMasterKeyWidget</class>
+ <widget class="QWidget" name="ChangeMasterKeyWidget">
   <property name="geometry">
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>310</width>
+    <width>305</width>
     <height>199</height>
    </rect>
   </property>
@@ -14,7 +14,7 @@
    <enum>Qt::StrongFocus</enum>
   </property>
   <property name="windowTitle">
-   <string>AddNewKeyDataWidget</string>
+   <string>ChangeMasterKeyWidget</string>
   </property>
   <layout class="QGridLayout" name="gridLayout">
    <property name="leftMargin">
@@ -47,90 +47,6 @@
       <string>dialog</string>
      </property>
      <layout class="QGridLayout" name="gridLayout_2">
-      <item row="5" column="0" colspan="3">
-       <spacer name="verticalSpacer_3">
-        <property name="orientation">
-         <enum>Qt::Vertical</enum>
-        </property>
-        <property name="sizeType">
-         <enum>QSizePolicy::Fixed</enum>
-        </property>
-        <property name="sizeHint" stdset="0">
-         <size>
-          <width>20</width>
-          <height>25</height>
-         </size>
-        </property>
-       </spacer>
-      </item>
-      <item row="7" column="1">
-       <spacer name="horizontalSpacer_2">
-        <property name="orientation">
-         <enum>Qt::Horizontal</enum>
-        </property>
-        <property name="sizeType">
-         <enum>QSizePolicy::Preferred</enum>
-        </property>
-        <property name="sizeHint" stdset="0">
-         <size>
-          <width>40</width>
-          <height>20</height>
-         </size>
-        </property>
-       </spacer>
-      </item>
-      <item row="4" column="0" colspan="3">
-       <widget class="QLineEdit" name="m_password_lineEdit">
-        <property name="font">
-         <font>
-          <pointsize>10</pointsize>
-         </font>
-        </property>
-        <property name="contextMenuPolicy">
-         <enum>Qt::NoContextMenu</enum>
-        </property>
-        <property name="echoMode">
-         <enum>QLineEdit::Password</enum>
-        </property>
-        <property name="alignment">
-         <set>Qt::AlignCenter</set>
-        </property>
-        <property name="placeholderText">
-         <string>Password</string>
-        </property>
-       </widget>
-      </item>
-      <item row="3" column="0" colspan="3">
-       <widget class="QLineEdit" name="m_username_lineEdit">
-        <property name="font">
-         <font>
-          <pointsize>10</pointsize>
-         </font>
-        </property>
-        <property name="contextMenuPolicy">
-         <enum>Qt::NoContextMenu</enum>
-        </property>
-        <property name="alignment">
-         <set>Qt::AlignCenter</set>
-        </property>
-        <property name="placeholderText">
-         <string>Username</string>
-        </property>
-       </widget>
-      </item>
-      <item row="8" column="0" colspan="3">
-       <spacer name="verticalSpacer">
-        <property name="orientation">
-         <enum>Qt::Vertical</enum>
-        </property>
-        <property name="sizeHint" stdset="0">
-         <size>
-          <width>20</width>
-          <height>1</height>
-         </size>
-        </property>
-       </spacer>
-      </item>
       <item row="0" column="0" colspan="3">
        <spacer name="verticalSpacer_2">
         <property name="orientation">
@@ -147,22 +63,8 @@
         </property>
        </spacer>
       </item>
-      <item row="7" column="2">
-       <widget class="QPushButton" name="m_add_btn">
-        <property name="text">
-         <string>Add</string>
-        </property>
-       </widget>
-      </item>
-      <item row="7" column="0">
-       <widget class="QPushButton" name="m_cancel_btn">
-        <property name="text">
-         <string>Cancel</string>
-        </property>
-       </widget>
-      </item>
-      <item row="1" column="0" colspan="3">
-       <widget class="QLineEdit" name="m_title_lineEdit">
+      <item row="3" column="0" colspan="3">
+       <widget class="QLineEdit" name="m_newMasterKey_lineEdit">
         <property name="font">
          <font>
           <pointsize>10</pointsize>
@@ -171,18 +73,128 @@
         <property name="contextMenuPolicy">
          <enum>Qt::NoContextMenu</enum>
         </property>
+        <property name="echoMode">
+         <enum>QLineEdit::Password</enum>
+        </property>
         <property name="alignment">
          <set>Qt::AlignCenter</set>
         </property>
         <property name="placeholderText">
-         <string>Title</string>
+         <string>New Master Key</string>
         </property>
        </widget>
       </item>
-      <item row="2" column="0" colspan="3">
+      <item row="9" column="0" colspan="3">
+       <spacer name="verticalSpacer">
+        <property name="orientation">
+         <enum>Qt::Vertical</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>20</width>
+          <height>1</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+      <item row="8" column="0">
+       <widget class="QPushButton" name="m_cancel_btn">
+        <property name="text">
+         <string>Cancel</string>
+        </property>
+       </widget>
+      </item>
+      <item row="6" column="0" colspan="3">
+       <spacer name="verticalSpacer_3">
+        <property name="orientation">
+         <enum>Qt::Vertical</enum>
+        </property>
+        <property name="sizeType">
+         <enum>QSizePolicy::Fixed</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>20</width>
+          <height>25</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+      <item row="4" column="0" colspan="3">
+       <widget class="QLineEdit" name="m_verifyNewMasterKey_lineEdit">
+        <property name="font">
+         <font>
+          <pointsize>10</pointsize>
+         </font>
+        </property>
+        <property name="contextMenuPolicy">
+         <enum>Qt::NoContextMenu</enum>
+        </property>
+        <property name="echoMode">
+         <enum>QLineEdit::Password</enum>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+        <property name="placeholderText">
+         <string>Verify New Master Key</string>
+        </property>
+       </widget>
+      </item>
+      <item row="8" column="2">
+       <widget class="QPushButton" name="m_change_btn">
+        <property name="text">
+         <string>Change</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="0" colspan="3">
+       <widget class="QLineEdit" name="m_oldMasterKey_lineEdit">
+        <property name="font">
+         <font>
+          <pointsize>10</pointsize>
+         </font>
+        </property>
+        <property name="contextMenuPolicy">
+         <enum>Qt::NoContextMenu</enum>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+        <property name="echoMode">
+         <enum>QLineEdit::Password</enum>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+        <property name="placeholderText">
+         <string>Old Master Key</string>
+        </property>
+       </widget>
+      </item>
+      <item row="8" column="1">
+       <spacer name="horizontalSpacer_2">
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+        <property name="sizeType">
+         <enum>QSizePolicy::Preferred</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>40</width>
+          <height>20</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+      <item row="5" column="0" colspan="3">
        <widget class="QLabel" name="m_errorInformation_lbl">
         <property name="text">
-         <string>The Title cannot be empty</string>
+         <string>&lt;error&gt;</string>
+        </property>
+        <property name="wordWrap">
+         <bool>true</bool>
         </property>
         <property name="severityType" stdset="0">
          <string>error</string>
@@ -196,11 +208,12 @@
  </widget>
  <layoutdefault spacing="6" margin="11"/>
  <tabstops>
-  <tabstop>m_title_lineEdit</tabstop>
-  <tabstop>m_username_lineEdit</tabstop>
-  <tabstop>m_password_lineEdit</tabstop>
-  <tabstop>m_add_btn</tabstop>
+  <tabstop>m_oldMasterKey_lineEdit</tabstop>
+  <tabstop>m_newMasterKey_lineEdit</tabstop>
+  <tabstop>m_verifyNewMasterKey_lineEdit</tabstop>
+  <tabstop>m_change_btn</tabstop>
   <tabstop>m_cancel_btn</tabstop>
+  <tabstop>frame</tabstop>
  </tabstops>
  <resources/>
  <connections/>

@@ -41,6 +41,21 @@ namespace aether_key_master_core
 		static QPointer<User> verifyMasterKeyForEnter(const QString& masterKey);
 
 		/**
+		 * @brief Check whether the given Master Key equals to the user's current Master Key
+		 * 
+		 * @param masterKey The Master Key which has to be checked
+		 * 
+		 * @return True if the given Master Key is the same as the user's Master Key
+		*/
+		bool verifyMasterKeyForChange(const QString& masterKey) const;
+		/**
+		 * @brief Setter of the Master Key member variable
+		 * 
+		 * @param masterKey The new Master Key value
+		*/
+		void setMasterKey(const QString& masterKey);
+
+		/**
 		 * @brief Saves the Keys data to the KEys file in the AppData
 		*/
 		void saveKeys() const;
