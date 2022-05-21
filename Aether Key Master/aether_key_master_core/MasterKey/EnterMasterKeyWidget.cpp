@@ -21,9 +21,7 @@ namespace aether_key_master_core
 	{
 		//Set the properties of the error QLabel
 		//The error QLabel takes its place even if it is hidden
-		auto errorInformationLabelSizePolicy = ui.m_errorInformation_lbl->sizePolicy();
-		errorInformationLabelSizePolicy.setRetainSizeWhenHidden(true);
-		ui.m_errorInformation_lbl->setSizePolicy(errorInformationLabelSizePolicy);
+		setWidgetSizeRetain(ui.m_errorInformation_lbl, true);
 		ui.m_errorInformation_lbl->setVisible(false);
 
 		//Show the appripriate error message on initialization

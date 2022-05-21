@@ -13,6 +13,13 @@ void changeWidgetSeverityStyle(QWidget* widget, const QString& severityValue)
 	widget->style()->polish(widget);
 }
 
+void setWidgetSizeRetain(QWidget* widget, const bool retainSize)
+{
+	auto widgetSizePolicy = widget->sizePolicy();
+	widgetSizePolicy.setRetainSizeWhenHidden(retainSize);
+	widget->setSizePolicy(widgetSizePolicy);
+}
+
 QString appdataFolder()
 {
 	const auto& appdataFolderPath = QStandardPaths::writableLocation(QStandardPaths::AppDataLocation) + "/";

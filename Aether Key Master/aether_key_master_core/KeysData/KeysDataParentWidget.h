@@ -27,11 +27,28 @@ namespace aether_key_master_core
 		 * @brief The currently active user
 		*/
 		QPointer<User> m_user;
+		/**
+		 * @brief The title of the last cklicked KeyData list item
+		*/
+		QString m_lastSelectedKey;
 
+		/**
+		 * @brief Initialize the default UI state
+		*/
+		void initializeUI();
 		/**
 		 * @brief Initialize the default signal-slot connections
 		*/
 		void initializeConnections() const;
+		/**
+		 * @brief List each stored KeyData element
+		*/
+		void listKeys();
+		/**
+		 * @brief Show the KeyData widget with the data of the selected KeyData
+		 * or hide it if the given KeyData is deselected
+		*/
+		void showKeyDataWidget();
 
 	private slots:
 		/**
@@ -42,5 +59,13 @@ namespace aether_key_master_core
 		 * @brief Slot to show modal dialog to change the user's Master Key
 		*/
 		void slot_showChangeMasterKeyWidget();
+		/**
+		 * @brief Slot to handle when the user click on one of the listed KeyData list element
+		*/
+		void slot_keyItemSelected(const QListWidgetItem* item);
+		/**
+		 * @brief Slot to update the UI when a KeyData is deleted
+		*/
+		void slot_keyDataDeleted();
 	};
 }

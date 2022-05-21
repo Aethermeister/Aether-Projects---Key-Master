@@ -134,6 +134,9 @@
     <ClCompile Include="MasterKey\ChangeMasterKeyWidget.cpp">
       <Filter>Source Files\MasterKey</Filter>
     </ClCompile>
+    <ClCompile Include="KeysData\KeyDataWidget.cpp">
+      <Filter>Source Files\KeysData</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <QtMoc Include="MainWindow.h">
@@ -172,6 +175,9 @@
     <QtMoc Include="MasterKey\ChangeMasterKeyWidget.h">
       <Filter>Header Files\MasterKey</Filter>
     </QtMoc>
+    <QtMoc Include="KeysData\KeyDataWidget.h">
+      <Filter>Header Files\KeysData</Filter>
+    </QtMoc>
   </ItemGroup>
   <ItemGroup>
     <QtUic Include="MainWindow.ui">
@@ -200,6 +206,9 @@
     </QtUic>
     <QtUic Include="MasterKey\ChangeMasterKeyWidget.ui">
       <Filter>Form Files\MasterKey</Filter>
+    </QtUic>
+    <QtUic Include="KeysData\KeyDataWidget.ui">
+      <Filter>Form Files\KeysData</Filter>
     </QtUic>
   </ItemGroup>
   <ItemGroup>

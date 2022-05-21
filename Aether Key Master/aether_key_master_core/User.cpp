@@ -96,7 +96,7 @@ namespace aether_key_master_core
 		AETHER_LOG_INFO("Keys file saved");
 	}
 
-	const QVector<KeyData>& User::storedKeys() const
+	QVector<KeyData>& User::storedKeys()
 	{
 		return m_storedKeys;
 	}
@@ -105,6 +105,12 @@ namespace aether_key_master_core
 	{
 		m_storedKeys.append(keyData);
 		AETHER_LOG_INFO("KeyData added");
+	}
+
+	void User::removeKeyData(const KeyData& keyData)
+	{
+		m_storedKeys.removeOne(keyData);
+		AETHER_LOG_INFO("KeyData removed");
 	}
 
 	QString User::generateKeysData() const

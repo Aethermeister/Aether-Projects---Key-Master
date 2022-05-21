@@ -112,6 +112,7 @@
     <ClCompile Include="Animation\FadeInAnimation.cpp" />
     <ClCompile Include="KeysData\AddNewKeyDataWidget.cpp" />
     <ClCompile Include="KeysData\KeyData.cpp" />
+    <ClCompile Include="KeysData\KeyDataWidget.cpp" />
     <ClCompile Include="KeysData\KeysDataParentWidget.cpp" />
     <ClCompile Include="MainWindow.cpp" />
     <ClCompile Include="MasterKey\ChangeMasterKeyWidget.cpp" />
@@ -137,6 +138,7 @@
     <QtMoc Include="Notification\NotificationWidget.h" />
     <QtMoc Include="MasterKey\MasterKeyResetHandler.h" />
     <QtMoc Include="MasterKey\ChangeMasterKeyWidget.h" />
+    <QtMoc Include="KeysData\KeyDataWidget.h" />
     <ClInclude Include="MasterKey\MasterKeyValidator.h" />
     <ClInclude Include="Utility\Utility.h" />
     <QtMoc Include="MasterKey\MasterKeyParentWidget.h" />
@@ -147,6 +149,7 @@
   </ItemGroup>
   <ItemGroup>
     <QtUic Include="KeysData\AddNewKeyDataWidget.ui" />
+    <QtUic Include="KeysData\KeyDataWidget.ui" />
     <QtUic Include="KeysData\KeysDataParentWidget.ui" />
     <QtUic Include="MainWindow.ui" />
     <QtUic Include="MasterKey\ChangeMasterKeyWidget.ui" />

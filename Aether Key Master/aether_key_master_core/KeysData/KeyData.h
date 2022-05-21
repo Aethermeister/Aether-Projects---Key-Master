@@ -17,6 +17,8 @@ namespace aether_key_master_core
 		KeyData(KeyData&&) = default;
 		KeyData& operator=(KeyData&&) = default;
 
+		bool operator==(const KeyData& keyData) const;
+
 		/**
 		 * @brief Getter of the title variable
 		 * 
@@ -30,11 +32,23 @@ namespace aether_key_master_core
 		*/
 		const QString& username() const;
 		/**
+		 * @brief Setter of the username variable
+		 * 
+		 * @param username The new username
+		*/
+		void setUsername(const QString& username);
+		/**
 		 * @brief Getter of the password variable
 		 * 
 		 * @return The password used for this Key
 		*/
 		const QString& password() const;
+		/**
+		 * @brief Setter of the password variable
+		 * 
+		 * @param password The new password
+		*/
+		void setPassword(const QString& password);
 
 	private:
 		/**

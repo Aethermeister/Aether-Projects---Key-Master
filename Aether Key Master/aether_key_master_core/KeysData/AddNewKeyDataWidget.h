@@ -54,5 +54,11 @@ namespace aether_key_master_core
 		 * @brief Slot to handle the user invoked cancel
 		*/
 		void slot_canceled();
+
+	signals:
+		/**
+		 * @brief Emitted when a new KeyData is added
+		*/
+		void sig_newKeyDataAdded();
 	};
 }

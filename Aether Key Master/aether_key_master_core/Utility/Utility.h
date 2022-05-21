@@ -45,6 +45,13 @@ void deleteContentWidget(QWidget* parentWidget, QLayout* parentLayout);
 void changeWidgetSeverityStyle(QWidget* widget, const QString& severityValue);
 
 /**
+ * @brief Sets the RetainSizeWhenHidden of the given widget
+ * 
+ * @param widget The QWidget which RetainSizeWhenHidden property has to be set
+ * @param retainSize The flag to set the RetainSizeWhenHidden property
+*/
+void setWidgetSizeRetain(QWidget* widget, const bool retainSize);
+/**
  * @brief Get the application specific APPDATA folder path and create it if it does not exist
  * 
  * @return The path to the application specific APPDATA folder

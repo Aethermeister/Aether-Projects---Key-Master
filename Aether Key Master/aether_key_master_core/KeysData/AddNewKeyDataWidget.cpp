@@ -24,9 +24,7 @@ namespace aether_key_master_core
 		setAutoFillBackground(true);
 
 		//Change the size policy of the information label and hide it
-		auto errorInformationLabelSizePolicy = ui.m_errorInformation_lbl->sizePolicy();
-		errorInformationLabelSizePolicy.setRetainSizeWhenHidden(true);
-		ui.m_errorInformation_lbl->setSizePolicy(errorInformationLabelSizePolicy);
+		setWidgetSizeRetain(ui.m_errorInformation_lbl, true);
 		ui.m_errorInformation_lbl->setVisible(false);
 	}
 
@@ -83,6 +81,7 @@ namespace aether_key_master_core
 		const KeyData newKeyData(title, username, password);
 		m_user->addKeyData(newKeyData);
 		m_user->saveKeys();
+		emit sig_newKeyDataAdded();
 
 		MainWindow::showNotification(QString("Key data added - %0").arg(title));
 

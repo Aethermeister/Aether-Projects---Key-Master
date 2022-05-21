@@ -6,6 +6,10 @@ namespace aether_key_master_core
 		m_title(title), m_username(username), m_password(password)
 	{
 	}
+	bool KeyData::operator==(const KeyData& keyData) const
+	{
+		return m_title == keyData.title();
+	}
 	const QString& KeyData::title() const
 	{
 		return m_title;
@@ -14,8 +18,16 @@ namespace aether_key_master_core
 	{
 		return m_username;
 	}
+	void KeyData::setUsername(const QString& username)
+	{
+		m_username = username;
+	}
 	const QString& KeyData::password() const
 	{
 		return m_password;
+	}
+	void KeyData::setPassword(const QString& password)
+	{
+		m_password = password;
 	}
 }

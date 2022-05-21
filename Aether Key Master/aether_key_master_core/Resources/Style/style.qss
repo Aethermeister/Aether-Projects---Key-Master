@@ -39,6 +39,24 @@ QFrame
     background-color: rgb(50, 50, 50);
 }
 
+QListWidget::item
+{
+    padding-top: 15px;
+    padding-bottom: 15px;
+
+    color: white;
+}
+
+QListWidget::item:hover
+{
+    background-color: rgb(40, 40, 40);
+}
+
+QListWidget::item:selected
+{
+    background-color: rgb(30, 30, 30);
+}
+
 QLabel
 {
     color: white;
@@ -72,6 +90,11 @@ QLineEdit[severityType="error"]
 QLineEdit:focus
 {
     border-bottom: 1px solid white;
+}
+
+QLineEdit:disabled
+{
+    color: gray;
 }
 
 QPushButton
