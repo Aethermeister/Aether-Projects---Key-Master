@@ -3,6 +3,7 @@
 #include "Aether CPP Logger/include/Logger.h"
 
 #include <QtWidgets/QApplication>
+#include <QtGui/QIcon>
 #include <QtCore/QFile>
 
 namespace aether_key_master_core
@@ -16,6 +17,7 @@ namespace aether_key_master_core
         QApplication::setOrganizationName("Aether Projects");
         QApplication::setOrganizationDomain("Aether Projects");
         QApplication::setApplicationVersion("1.0");
+        QApplication::setWindowIcon(QIcon(":/Images/Key.png"));
 
         //Initialize the Aether CPP Logger so it logs to the AppData folder
         AETHER_LOG_INIT_2(QApplication::applicationName().toStdString(), QApplication::organizationDomain().toStdString());

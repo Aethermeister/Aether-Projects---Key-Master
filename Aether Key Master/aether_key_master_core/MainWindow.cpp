@@ -14,6 +14,7 @@ namespace aether_key_master_core
 		ui.setupUi(this);
 
 		s_instance = this;
+		setWindowTitle(QString("Aether's Key Master %0").arg(QApplication::applicationVersion()));
 
 		//Always show the MasterKeyWidget first
 		showMasterKeyWidget();
