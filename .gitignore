@@ -56,4 +56,5 @@ compile_commands.json
 *.vs
 */aether_key_master/x64/*
 */aether_key_master_core/x64/*
+*/aether_key_master_tests/x64/*
 */Build/*
